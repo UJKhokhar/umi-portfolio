@@ -16,7 +16,7 @@
       </svg>
     </nav>
   </div>
-</template>
+</template>s
 
 <script>
 export default {

@@ -1,0 +1,52 @@
+<template>
+  <div class="work">
+    <h2>Work</h2>
+    <Accordian
+      v-for="(workplace, index) in workList"
+      :key="index"
+      :class="{ active: activeItemIndex === index }"
+      :workplace="workplace"
+      @fuck="shit(index)"
+    />
+  </div>
+</template>
+
+<script>
+import Accordian from "./Accordian.vue";
+
+export default {
+  name: "Work",
+  components: {
+    Accordian,
+  },
+  data() {
+    return {
+      activeItemIndex: null,
+      workList: [
+        {
+          workplace: "ASCAP",
+          description: ["foo", "bar", "baz"],
+          link: "google.com",
+        },
+        {
+          workplace: "Thingiverse",
+          description: ["aaa", "bbb", "ccc"],
+          link: "twitter.com",
+        },
+      ],
+    };
+  },
+  methods: {
+    shit(index) {
+      if (index === this.activeItemIndex) {
+        this.activeItemIndex = null;
+      } else {
+        this.activeItemIndex = index;
+      }
+    },
+  },
+};
+</script>
+
+<style lang="scss">
+</style>

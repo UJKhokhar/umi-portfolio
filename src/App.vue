@@ -1,16 +1,22 @@
 <template>
   <UmiHeader />
+  <Intro />
+  <Work />
 </template>
 
 <script>
-import UmiHeader from './components/UmiHeader.vue'
+import UmiHeader from "./components/UmiHeader.vue";
+import Intro from "./components/Intro.vue";
+import Work from "./components/Work.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    UmiHeader
-  }
-}
+    UmiHeader,
+    Intro,
+    Work,
+  },
+};
 </script>
 
 <style>
