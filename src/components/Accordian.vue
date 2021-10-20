@@ -1,6 +1,8 @@
 <template>
-  <div class="accordian" @click="$emit('fuck', index)">
-    <h3>{{ workplace.workplace }}</h3>
+  <div class="accordian">
+    <div @click="$emit('fuck', index)">
+      <h3>{{ workplace.workplace }}</h3>
+    </div>
     <div class="content">
       <ul>
         <li v-for="(item, index) in workplace.description" :key="index">
@@ -21,16 +23,17 @@ export default {
 </script>
 
 <style lang="scss">
-.active {
-  height: 200px;
-  background: gray;
-
-  .content {
-    display: block;
-  }
+.content {
+  max-height: 0;
+  transition: max-height 0.15s ease-out;
+  overflow: hidden;
+  background-color: Grey;
 }
 
-.content {
-  display: none;
+.active {
+  .content {
+    max-height: 500px;
+    transition: max-height 0.25s ease-in;
+  }
 }
 </style>
