@@ -27,7 +27,7 @@ export default {
   max-height: 0;
   transition: max-height 0.15s ease-out;
   overflow: hidden;
-  background-color: Grey;
+  border-bottom: 1px solid white;
 }
 
 .active {
