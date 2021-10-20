@@ -16,7 +16,7 @@
       </svg>
     </nav>
   </div>
-</template>s
+</template>
 
 <script>
 export default {
@@ -28,7 +28,6 @@ export default {
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 10px 40px;
 }
 
 svg {
