@@ -1,6 +1,6 @@
 <template>
-  <div class="work">
-    <h2>Work</h2>
+  <div class="work padding-top">
+    <h3>Work</h3>
     <Accordian
       v-for="(workplace, index) in workList"
       :key="index"
@@ -47,6 +47,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-</style>

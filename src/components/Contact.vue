@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h2>Say hi</h2>
+  <div class="padding-top">
+    <h2>Say hi!</h2>
   </div>
 </template>
 
