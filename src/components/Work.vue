@@ -33,6 +33,16 @@ export default {
           description: ["aaa", "bbb", "ccc"],
           link: "twitter.com",
         },
+        {
+          workplace: "Pink Art Machine",
+          description: ["lala", "emily", "blah"],
+          link: "twitter.com",
+        },
+        {
+          workplace: "TJMaxx",
+          description: ["poop", "tin", "can"],
+          link: "twitter.com",
+        },
       ],
     };
   },

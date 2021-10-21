@@ -1,7 +1,7 @@
 <template>
   <div>
     <div @click="$emit('fuck', index)">
-      <h3>{{ workplace.workplace }}</h3>
+      <h4>{{ workplace.workplace }}</h4>
     </div>
     <div class="content">
       <ul>

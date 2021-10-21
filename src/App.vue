@@ -32,7 +32,7 @@ body {
   background-color: #000000;
   color: #ffffff;
   margin: 0;
-  padding: 20px 40px;
+  padding: 40px 40px;
   font-family: "Nunito", Helvetica, sans-serif;
   font-weight: normal;
   font-size: clamp(100%, 1rem + 2vw, 24px);
@@ -53,5 +53,11 @@ h2 {
 
 h3 {
   font-size: 1.1em;
+  margin-bottom: 24px;
+}
+
+h4 {
+  font-size: 0.9em;
+  margin: 12px 0;
 }
 </style>
