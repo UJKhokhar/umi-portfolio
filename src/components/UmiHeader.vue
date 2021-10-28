@@ -2,30 +2,48 @@
   <div class="umi-header">
     <nav class="main-nav">
       <h1>Umi</h1>
-      <button
-        :class="{ open: isNavOpen }"
-        aria-label="Toggle Navigation"
-        @click="toggleNav"
-      >
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 100 100"
-        >
-          <path
-            d="M90 7a3 3 0 0 1 3 3v80a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3V10a3 3 0 0 1 3-3h80m0-7H10A10 10 0 0 0 0 10v80a10 10 0 0 0 10 10h80a10 10 0 0 0 10-10V10A10 10 0 0 0 90 0Z"
-          />
-          <g class="foo">
-            <rect x="20" y="20" width="60" height="10" rx="5" />
-          </g>
-          <!-- <g>
-            <rect x="20" y="45" width="60" height="10" rx="5" />
-          </g>
-          <g class="translate-up">
-            <rect x="20" y="70" width="60" height="10" rx="5" />
-          </g> -->
-        </svg>
-      </button>
+
+      <div class="icon-container">
+        <div class="svg-wrapper">
+          <svg
+            fill="#ffffff"
+            id="Layer_1"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 89.17 94.41"
+          >
+            <title>lightbulb</title>
+            <path
+              d="M54.71,83.3H33.63a1.78,1.78,0,1,1,0-3.55H54.71a1.78,1.78,0,0,1,0,3.55ZM44.56,20.07a25.28,25.28,0,0,1,17.58,43.5c-1.5,1.8-2.38,4.1-2.67,10.61A2.34,2.34,0,0,1,54.8,74c.31-6.89,1.34-10.56,3.94-13.61a20.64,20.64,0,1,0-28.32,0c2.6,3,3.64,6.72,3.95,13.61a2.34,2.34,0,0,1-4.67.21c-.29-6.51-1.17-8.81-2.67-10.61a25.28,25.28,0,0,1,17.53-43.5Z"
+            />
+            <path
+              d="M52.85,88.76H36.32a1.78,1.78,0,0,1,0-3.55H52.85a1.78,1.78,0,0,1,0,3.55Z"
+            />
+            <path
+              d="M50.36,91.15a6.27,6.27,0,0,1-5.78,3.26,6.26,6.26,0,0,1-5.77-3.26Z"
+            />
+            <path
+              d="M42.55,29c-10,0-15.66,8-15.66,18a1.33,1.33,0,0,0,2.66,0c0-8.57,4.43-15.36,13-15.36a1.34,1.34,0,1,0,0-2.67Z"
+            />
+            <path
+              d="M13.74,40.31H1.33c-.9,0-1.33-.82-1.33-1.77s.43-1.78,1.33-1.78H13.74c.9,0,1.34.83,1.34,1.78s-.44,1.77-1.34,1.77Z"
+            />
+            <path
+              d="M22.26,22.75l-7-7c-.5-.51-.28-1.21.25-1.75s1.24-.75,1.75-.25l7,7c.51.5.29,1.21-.24,1.75s-1.25.75-1.75.24Z"
+            />
+            <path
+              d="M42.81,13.74V1.33c0-.9.83-1.33,1.77-1.33s1.78.43,1.78,1.33V13.74c0,.9-.83,1.34-1.78,1.34s-1.77-.44-1.77-1.34Z"
+            />
+            <path
+              d="M87.84,40.31H75.42c-.89,0-1.33-.82-1.33-1.77s.44-1.78,1.33-1.78H87.84c.89,0,1.33.83,1.33,1.78s-.44,1.77-1.33,1.77Z"
+            />
+            <path
+              d="M64.91,20.76l7-7c.51-.5,1.21-.28,1.75.25s.75,1.24.24,1.75l-7,7c-.51.51-1.21.29-1.75-.24s-.75-1.25-.25-1.75Z"
+            />
+          </svg>
+        </div>
+        <BurgerMenu />
+      </div>
     </nav>
     <nav class="hidden-nav" :class="{ open: isNavOpen }">
       <ul>
@@ -37,10 +55,14 @@
 </template>
 
 <script>
+import BurgerMenu from "@/components/BurgerMenu.vue";
 import anime from "animejs/lib/anime.es.js";
 
 export default {
   name: "UmiHeader",
+  components: {
+    BurgerMenu,
+  },
   data() {
     return {
       isNavOpen: false,
@@ -48,14 +70,7 @@ export default {
   },
   methods: {
     toggleNav() {
-      this.isNavOpen = !this.isNavOpen;
-
-      anime({
-        targets: ".foo",
-        translateY: 20,
-        delay: 100,
-        easing: "easeInOutQuad",
-      });
+      // this.isNavOpen = !this.isNavOpen;
     },
   },
 };
@@ -65,6 +80,11 @@ export default {
 nav.main-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    color: #fff433;
+  }
 }
 
 nav.hidden-nav {
@@ -80,28 +100,10 @@ nav.hidden-nav {
   }
 }
 
-// button g {
-//   transition: all ease-in-out 0.25s;
-//   transform-origin: center;
-// }
-
-// button.open .translate-down {
-//   transform: translateY(10px);
-//   transition-delay: 0s;
-// }
-
-// button.open .rotate {
-//   transform: rotate(45deg);
-//   transition-delay: 0.25s;
-// }
-
-// button.open .translate-up {
-//   transform: translateY(-25px);
-//   transition-delay: 0s;
-// }
-
-svg {
-  fill: #ffffff;
-  width: 25px;
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
 }
 </style>
