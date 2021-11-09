@@ -9,14 +9,26 @@
           {{ item }}
         </li>
       </ul>
-      <a :href="workplace.link">Visit the Site</a>
+      <a :href="workplace.link"
+        ><SVGWrapper width="30" height="25" iconColor="#ffffff"
+          ><Arrow />
+        </SVGWrapper>
+        Visit the Site</a
+      >
     </div>
   </div>
 </template>
 
 <script>
+import SVGWrapper from "@/components/SVGWrapper";
+import Arrow from "@/assets/logos/Arrow";
+
 export default {
   name: "Accordian",
+  components: {
+    SVGWrapper,
+    Arrow,
+  },
   props: ["workplace"],
   emits: ["fuck"],
 };
@@ -34,6 +46,7 @@ export default {
   .content {
     max-height: 500px;
     transition: max-height 0.25s ease-in;
+    padding-bottom: 12px;
   }
 }
 </style>

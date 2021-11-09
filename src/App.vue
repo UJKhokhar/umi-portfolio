@@ -2,6 +2,7 @@
   <UmiHeader />
   <Intro />
   <Work />
+  <!-- <Test /> -->
   <Companies />
   <Contact />
 </template>
@@ -11,6 +12,7 @@ import UmiHeader from "./components/UmiHeader.vue";
 import Intro from "./components/Intro.vue";
 import Work from "./components/Work.vue";
 import Companies from "./components/Companies.vue";
+// import Test from "./components/Test.vue";
 import Contact from "./components/Contact.vue";
 
 export default {
@@ -21,11 +23,12 @@ export default {
     Work,
     Companies,
     Contact,
+    // Test,
   },
 };
 </script>
 
-<style>
+<style style="scss">
 @import "./styles/reset.scss";
 
 body {
@@ -39,7 +42,7 @@ body {
 }
 
 .padding-top {
-  padding-top: 40px;
+  padding-top: 60px;
 }
 
 h1 {
@@ -59,5 +62,20 @@ h3 {
 h4 {
   font-size: 0.9em;
   margin: 12px 0;
+}
+
+ul {
+  list-style: circle;
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  font-size: 0.7em;
+  margin-bottom: 5px;
 }
 </style>

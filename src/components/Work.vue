@@ -1,6 +1,6 @@
 <template>
   <div class="work padding-top">
-    <h3>Work</h3>
+    <h3>Live Projects</h3>
     <Accordian
       v-for="(workplace, index) in workList"
       :key="index"
@@ -25,23 +25,34 @@ export default {
       workList: [
         {
           workplace: "ASCAP",
-          description: ["foo", "bar", "baz"],
-          link: "google.com",
+          description: [
+            "Led development to modernize codebase and migrate front end from backbone.js to vue.js",
+            "Built component libraries",
+            "Introduced spec sheets and other tools to create",
+          ],
+          link: "https://ascap.com",
         },
         {
           workplace: "Thingiverse",
-          description: ["aaa", "bbb", "ccc"],
-          link: "twitter.com",
+          description: [
+            "Full Stack development on a site with millions of users using PHP and JavaScript",
+          ],
+          link: "https://thingiverse.com",
         },
         {
           workplace: "Pink Art Machine",
-          description: ["lala", "emily", "blah"],
-          link: "twitter.com",
+          description: [
+            "Designed and built a fully responsive custom portfolio site using Vue.js",
+            "Set up site using AWS (Amazon Web Services) using S3 and cloudfront to reduce costs for client",
+          ],
+          link: "https://pinkartmachine.com",
         },
         {
           workplace: "TJMaxx",
-          description: ["poop", "tin", "can"],
-          link: "twitter.com",
+          description: [
+            "Built a site for TJMaxx to promote their Maxx You Project, dedicated to supporting women",
+          ],
+          link: "https://maxxyouproject.com/",
         },
       ],
     };

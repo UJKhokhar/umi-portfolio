@@ -1,51 +1,34 @@
 <template>
   <div class="padding-top">
     <h3>Other companies I've worked with:</h3>
-    <div class="grid-container">
-      <SVGWrapper height="65"><CitiLogo /></SVGWrapper>
-      <SVGWrapper height="41"><EbayLogo /></SVGWrapper>
-      <SVGWrapper><HawaiiLogo /></SVGWrapper>
-      <SVGWrapper><NOAALogo /></SVGWrapper>
-      <SVGWrapper height="30"><PromundoLogo /></SVGWrapper>
-      <SVGWrapper height="51"><TresemmeLogo /></SVGWrapper>
+    <div class="gridc">
+      <SVGImage SVGFile="Citi" />
+      <SVGImage SVGFile="Ebay" />
+      <SVGImage SVGFile="Hawaii" />
+      <SVGImage SVGFile="NOAA" />
+      <SVGImage SVGFile="Promundo" />
+      <SVGImage SVGFile="Tresemme" />
     </div>
   </div>
 </template>
 
 <script>
-import SVGWrapper from "@/components/SVGWrapper";
-import CitiLogo from "@/assets/logos/CitiLogo.vue";
-import EbayLogo from "@/assets/logos/EbayLogo.vue";
-import HawaiiLogo from "@/assets/logos/HawaiiLogo.vue";
-import NOAALogo from "@/assets/logos/NOAALogo.vue";
-import PromundoLogo from "@/assets/logos/PromundoLogo.vue";
-import TresemmeLogo from "@/assets/logos/TresemmeLogo.vue";
+import SVGImage from "@/components/SVGImage";
 
 export default {
   name: "Companies",
   components: {
-    SVGWrapper,
-    CitiLogo,
-    EbayLogo,
-    HawaiiLogo,
-    NOAALogo,
-    PromundoLogo,
-    TresemmeLogo,
+    SVGImage,
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.grid-container {
+.gridc {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 5%;
-  row-gap: 10px;
-  justify-items: center;
+  grid-template-columns: 0.5fr;
+  justify-content: center;
+  grid-row-gap: 30px;
   align-items: center;
-
-  img {
-    width: 100%;
-  }
 }
 </style>
