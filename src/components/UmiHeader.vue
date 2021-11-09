@@ -2,11 +2,10 @@
   <div class="umi-header">
     <nav class="main-nav">
       <h1>Umi</h1>
-
       <div class="icon-container">
         <div class="svg-wrapper">
           <svg
-            fill="#ffffff"
+            fill="#fff433"
             id="Layer_1"
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"

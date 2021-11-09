@@ -14,4 +14,8 @@ export default {
 .intro {
   text-align: center;
 }
+
+h2 {
+  color: #fff433;
+}
 </style>
