@@ -8,15 +8,15 @@
 </template>
 
 <script>
-import UmiHeader from "./components/UmiHeader.vue";
-import Intro from "./components/Intro.vue";
-import Work from "./components/Work.vue";
-import Companies from "./components/Companies.vue";
+import UmiHeader from './components/UmiHeader.vue';
+import Intro from './components/Intro.vue';
+import Work from './components/Work.vue';
+import Companies from './components/Companies.vue';
 // import Test from "./components/Test.vue";
-import Contact from "./components/Contact.vue";
+import Contact from './components/Contact.vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     UmiHeader,
     Intro,
@@ -28,12 +28,12 @@ export default {
 };
 </script>
 
-<style style="scss">
-@import "./styles/reset.scss";
+<style lang="scss">
+@import './styles/reset.scss';
 
 body {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: $black;
+  color: $purple;
   margin: 0;
   padding: 40px 40px;
   font-family: "Nunito", Helvetica, sans-serif;
@@ -52,11 +52,14 @@ h1 {
 
 h2 {
   font-size: 1.3em;
+  color: $white;
 }
 
 h3 {
   font-size: 1.1em;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
+  text-align: center;
+  color: $yellow;
 }
 
 h4 {
@@ -71,11 +74,21 @@ ul {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: $yellow;
+  margin-bottom: 12px;
 }
 
 li {
   font-size: 0.7em;
-  margin-bottom: 5px;
+  margin-bottom: 12px;
+}
+
+.h-align-items-center {
+  display: flex;
+  align-items: center;
+}
+
+.h-margin-right {
+  margin-right: 6px;
 }
 </style>

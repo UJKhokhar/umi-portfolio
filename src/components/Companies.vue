@@ -2,21 +2,21 @@
   <div class="padding-top">
     <h3>Other companies I've worked with:</h3>
     <div class="gridc">
-      <SVGImage SVGFile="Citi" />
-      <SVGImage SVGFile="Ebay" />
-      <SVGImage SVGFile="Hawaii" />
-      <SVGImage SVGFile="NOAA" />
-      <SVGImage SVGFile="Promundo" />
-      <SVGImage SVGFile="Tresemme" />
+      <SVGImage svg-file="Citi" />
+      <SVGImage svg-file="Ebay" />
+      <SVGImage svg-file="Hawaii" />
+      <SVGImage svg-file="NOAA" />
+      <SVGImage svg-file="Promundo" />
+      <SVGImage svg-file="Tresemme" />
     </div>
   </div>
 </template>
 
 <script>
-import SVGImage from "@/components/SVGImage";
+import SVGImage from '@/components/SVGImage';
 
 export default {
-  name: "Companies",
+  name: 'Companies',
   components: {
     SVGImage,
   },

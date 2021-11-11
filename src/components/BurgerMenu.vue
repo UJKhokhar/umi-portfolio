@@ -1,10 +1,10 @@
 <template>
   <div class="svg-wrapper">
     <svg
-      @click="toggleNav"
       id="poop"
       viewBox="0 0 100 100"
       xmlns="http://www.w3.org/2000/svg"
+      @click="toggleNav"
     >
       <line
         id="line1"
@@ -41,11 +41,11 @@
 </template>
 
 <script>
-import anime from "animejs/lib/anime.es.js";
+import anime from 'animejs/lib/anime.es.js';
 let played = false;
 
 export default {
-  name: "BurgerMenu",
+  name: 'BurgerMenu',
   data() {
     return {
       isNavOpen: false,
@@ -56,14 +56,14 @@ export default {
       // // this.isNavOpen = !this.isNavOpen;
       // console.log("WTF");
       const t1 = anime.timeline({
-        easing: "easeOutExpo",
+        easing: 'easeOutExpo',
         duration: 200,
         autoplay: false,
       });
 
       // // Lines to circles
       t1.add({
-        targets: "#line1",
+        targets: '#line1',
         x1: 30,
         x2: 30,
         y1: 30,
@@ -71,26 +71,26 @@ export default {
       })
         .add(
           {
-            targets: "#line3",
+            targets: '#line3',
             x1: 50,
             x2: 50,
             y1: 50,
             y2: 50,
           },
-          "-=200"
+          '-=200'
         )
         .add(
           {
-            targets: "#line2",
+            targets: '#line2',
             x1: 70,
             x2: 70,
             y1: 70,
             y2: 70,
           },
-          "-=400"
+          '-=400'
         )
         .add({
-          targets: "#line1, #line2, #line3",
+          targets: '#line1, #line2, #line3',
           x1: 50,
           x2: 50,
           y1: 50,
@@ -98,13 +98,13 @@ export default {
         })
         .add(
           {
-            targets: "#line3",
+            targets: '#line3',
             opacity: 0,
           },
-          "-=200"
+          '-=200'
         )
         .add({
-          targets: "#line1",
+          targets: '#line1',
           x1: 30,
           y1: 30,
           x2: 70,
@@ -112,13 +112,13 @@ export default {
         })
         .add(
           {
-            targets: "#line2",
+            targets: '#line2',
             x1: 30,
             y1: 70,
             x2: 70,
             y2: 30,
           },
-          "-=200"
+          '-=200'
         );
 
       played = !played;

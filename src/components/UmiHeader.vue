@@ -5,8 +5,8 @@
       <div class="icon-container">
         <div class="svg-wrapper">
           <svg
-            fill="#fff433"
             id="Layer_1"
+            fill="#fff433"
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 89.17 94.41"
@@ -44,7 +44,10 @@
         <BurgerMenu />
       </div>
     </nav>
-    <nav class="hidden-nav" :class="{ open: isNavOpen }">
+    <nav
+      class="hidden-nav"
+      :class="{ open: isNavOpen }"
+    >
       <ul>
         <li>Work</li>
         <li>Contact</li>
@@ -54,11 +57,11 @@
 </template>
 
 <script>
-import BurgerMenu from "@/components/BurgerMenu.vue";
-import anime from "animejs/lib/anime.es.js";
+import BurgerMenu from '@/components/BurgerMenu.vue';
+import anime from 'animejs/lib/anime.es.js';
 
 export default {
-  name: "UmiHeader",
+  name: 'UmiHeader',
   components: {
     BurgerMenu,
   },
@@ -82,7 +85,7 @@ nav.main-nav {
   align-items: center;
 
   h1 {
-    color: #fff433;
+    color: $purple;
   }
 }
 
@@ -91,8 +94,8 @@ nav.hidden-nav {
   right: 0;
   top: 100px;
   display: none;
-  background: #ffffff;
-  color: #000000;
+  background: $white;
+  color: $black;
 
   &.open {
     display: block;

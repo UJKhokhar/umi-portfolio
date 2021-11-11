@@ -6,16 +6,12 @@
 
 <script>
 export default {
-  name: "Intro",
+  name: 'Intro',
 };
 </script>
 
 <style lang="scss">
 .intro {
   text-align: center;
-}
-
-h2 {
-  color: #fff433;
 }
 </style>

@@ -28,7 +28,6 @@ export default {
           description: [
             "Led development to modernize codebase and migrate front end from backbone.js to vue.js",
             "Built component libraries",
-            "Introduced spec sheets and other tools to create",
           ],
           link: "https://ascap.com",
         },

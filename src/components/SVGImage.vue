@@ -1,18 +1,25 @@
 <template>
   <div>
-    <img class="responsive-img" alt="JS logo" :src="path" />
+    <img
+      class="responsive-img"
+      alt="JS logo"
+      :src="path"
+    >
   </div>
 </template>
 
 <script>
 export default {
-  name: "SVG-image",
+  name: 'SVGImage',
   props: {
-    SVGFile: String,
+    svgFile: {
+      type: String,
+      required: true
+    }
   },
   computed: {
     path() {
-      return require(`@/assets/editedSVG/${this.SVGFile}.svg`);
+      return require(`@/assets/editedSVG/${this.svgFile}.svg`);
     },
   },
 };
