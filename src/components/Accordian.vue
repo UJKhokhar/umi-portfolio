@@ -72,4 +72,20 @@ a {
 .h-border-bottom-purple {
   border-bottom: 1px solid $purple;
 }
+
+ul {
+  list-style: circle;
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: $yellow;
+  margin-bottom: 12px;
+}
+
+li {
+  font-size: 0.7em;
+  margin-bottom: 12px;
+}
 </style>

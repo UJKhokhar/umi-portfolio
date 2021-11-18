@@ -67,22 +67,6 @@ h4 {
   margin: 12px 0;
 }
 
-ul {
-  list-style: circle;
-  margin-left: 20px;
-}
-
-a {
-  text-decoration: none;
-  color: $yellow;
-  margin-bottom: 12px;
-}
-
-li {
-  font-size: 0.7em;
-  margin-bottom: 12px;
-}
-
 .h-align-items-center {
   display: flex;
   align-items: center;
@@ -90,5 +74,9 @@ li {
 
 .h-margin-right {
   margin-right: 6px;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 </style>
