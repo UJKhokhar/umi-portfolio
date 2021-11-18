@@ -21,7 +21,6 @@
 
 <script>
 import BurgerMenu from '@/components/BurgerMenu.vue';
-// import anime from 'animejs/lib/anime.es.js';
 
 export default {
   name: 'UmiHeader',
@@ -63,18 +62,22 @@ nav.main-nav {
   width: 150px;
 }
 
+$border_size: 10px;
+
 .abso {
-  width: 100vw;
-  height: 100vh;
+  width: calc(100vw - #{$border_size * 2});
+  height: calc(100vh - #{$border_size * 2});
   background-color: $white;
   z-index: 1;
   position: absolute;
-  top: -1000px;
+  top: -2000px;
   left: 0;
   transition: ease-in top .25s;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: $border_size solid $purple;
+  border-radius: 20px;
 
   &.active {
     top: 0;
@@ -89,9 +92,13 @@ nav.main-nav {
     }
 
     a {
-      color: $yellow;
+      color: $purple;
       text-decoration: none;
       font-size: 1.5em;
+
+      @include tablet {
+        font-size: 2.5em;
+      }
     }
   }
 }

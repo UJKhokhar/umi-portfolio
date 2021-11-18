@@ -1,0 +1,32 @@
+body.no-scroll {
+  overflow: hidden;
+}
+
+.h-padding-top {
+  padding-top: 60px;
+
+  @include tablet {
+    padding-top: 100px;
+  }
+}
+
+.h-border-bottom-purple {
+  border-bottom: 1px solid $purple;
+}
+
+.h-align-items-center {
+  display: flex;
+  align-items: center;
+}
+
+.h-margin-right {
+  margin-right: 6px;
+}
+
+.h-justify-content-right {
+  justify-content: right;
+}
+
+.h-justify-content-center {
+  justify-content: center;
+}

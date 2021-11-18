@@ -1,5 +1,5 @@
 <template>
-  <div class="padding-top contact-container">
+  <div class="h-align-items-center h-justify-content-center h-padding-top contact-container">
     <a
       class="h-align-items-center"
       href="mailto:ujkhokhar@gmail.com?subject=I saw your site Umi and it's awesome!"
@@ -32,6 +32,7 @@ a {
   text-decoration: none;
   color: $yellow;
   justify-content: space-evenly;
+  width: 50%;
 }
 
 h3 {

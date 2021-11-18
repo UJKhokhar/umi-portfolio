@@ -1,5 +1,5 @@
 <template>
-  <div class="work padding-top">
+  <div class="work h-padding-top">
     <h3>Live Projects</h3>
     <Accordian
       v-for="(workplace, index) in workList"
@@ -12,10 +12,10 @@
 </template>
 
 <script>
-import Accordian from "./Accordian.vue";
+import Accordian from './Accordian.vue';
 
 export default {
-  name: "Work",
+  name: 'Work',
   components: {
     Accordian,
   },
@@ -24,34 +24,34 @@ export default {
       activeItemIndex: null,
       workList: [
         {
-          workplace: "ASCAP",
+          workplace: 'ASCAP',
           description: [
-            "Led development to modernize codebase and migrate front end from backbone.js to vue.js",
-            "Built component libraries",
+            'Led development to modernize codebase and migrate front end from backbone.js to vue.js',
+            'Built component libraries',
           ],
-          link: "https://ascap.com",
+          link: 'https://ascap.com',
         },
         {
-          workplace: "Thingiverse",
+          workplace: 'Thingiverse',
           description: [
-            "Full Stack development on a site with millions of users using PHP and JavaScript",
+            'Full Stack development on a site with millions of users using PHP and JavaScript',
           ],
-          link: "https://thingiverse.com",
+          link: 'https://thingiverse.com',
         },
         {
-          workplace: "Pink Art Machine",
+          workplace: 'Pink Art Machine',
           description: [
-            "Designed and built a fully responsive custom portfolio site using Vue.js",
-            "Set up site using AWS (Amazon Web Services) using S3 and cloudfront to reduce costs for client",
+            'Designed and built a fully responsive custom portfolio site using Vue.js',
+            'Set up site using AWS (Amazon Web Services) using S3 and cloudfront to reduce costs for client',
           ],
-          link: "https://pinkartmachine.com",
+          link: 'https://pinkartmachine.com',
         },
         {
-          workplace: "TJMaxx",
+          workplace: 'TJMaxx',
           description: [
-            "Built a site for TJMaxx to promote their Maxx You Project, dedicated to supporting women",
+            'Built a site for TJMaxx to promote their Maxx You Project, dedicated to supporting women',
           ],
-          link: "https://maxxyouproject.com/",
+          link: 'https://maxxyouproject.com/',
         },
       ],
     };

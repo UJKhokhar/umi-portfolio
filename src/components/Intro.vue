@@ -1,5 +1,5 @@
 <template>
-  <div class="intro padding-top">
+  <div class="intro h-padding-top">
     <h2>Hi I'm Umi (they/them). I give code. You give money.</h2>
   </div>
 </template>

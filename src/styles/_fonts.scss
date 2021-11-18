@@ -1,0 +1,75 @@
+body {
+  font-family: "Nunito", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: clamp(100%, 1rem + 2vw, 24px);
+
+  @include desktop {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 1.5em;
+
+  @include tablet {
+    font-size: 2em;
+  }
+}
+
+h2 {
+  font-size: 1.3em;
+  color: $white;
+
+  @include tablet {
+    font-size: 2em;
+    line-height: 1.3;
+  }
+}
+
+h3 {
+  font-size: 1.1em;
+  margin-bottom: 48px;
+  text-align: center;
+  color: $yellow;
+  font-weight: 100;
+
+  @include tablet {
+    font-size: 1.6em;
+    margin-bottom: 96px;
+  }
+}
+
+h4 {
+  font-size: 0.9em;
+  margin: 12px 0;
+
+  @include tablet {
+    font-size: 1.2em;
+    margin: 24px 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $yellow;
+  margin-bottom: 12px;
+  font-size: 0.8em;
+
+  @include tablet {
+    font-size: 0.9em;
+    margin-bottom: 24px;
+  }
+}
+
+li {
+  font-size: 0.7em;
+  margin-bottom: 12px;
+
+  @include tablet {
+    font-size: 1em;
+    margin-bottom: 24px;
+    line-height: 1.3;
+  }
+}

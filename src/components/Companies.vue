@@ -1,6 +1,6 @@
 <template>
-  <div class="padding-top">
-    <h3>Other companies I've worked with:</h3>
+  <div class="h-padding-top">
+    <h3>Some companies I've worked with</h3>
     <div class="gridc">
       <SVGImage svg-file="Citi" />
       <SVGImage svg-file="Ebay" />
@@ -30,5 +30,11 @@ export default {
   justify-content: center;
   grid-row-gap: 30px;
   align-items: center;
+
+  @include tablet {
+    grid-template-columns: .4fr .4fr;
+    grid-column-gap: 96px;
+    grid-row-gap: 48px;
+  }
 }
 </style>

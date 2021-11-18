@@ -14,7 +14,7 @@
       </ul>
       <a
         :href="workplace.link"
-        class="h-align-items-center"
+        class="h-align-items-center h-justify-content-right"
       ><SVGWrapper
         class="h-margin-right"
         width="15"
@@ -43,49 +43,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.content {
-  max-height: 0;
-  transition: max-height 0.15s ease-out;
-  overflow: hidden;
-}
-
-.active {
   .content {
-    max-height: 500px;
-    transition: max-height 0.25s ease-in;
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
   }
-}
 
-a {
-  font-size: 0.8em;
-}
+  .active {
+    .content {
+      max-height: 500px;
+      transition: max-height 0.25s ease-in;
+    }
+  }
 
-.h-align-items-center {
-  display: flex;
-  align-items: center;
-}
+  ul {
+    list-style: circle;
+    margin-left: 20px;
 
-.h-margin-right {
-  margin-right: 6px;
-}
-
-.h-border-bottom-purple {
-  border-bottom: 1px solid $purple;
-}
-
-ul {
-  list-style: circle;
-  margin-left: 20px;
-}
-
-a {
-  text-decoration: none;
-  color: $yellow;
-  margin-bottom: 12px;
-}
-
-li {
-  font-size: 0.7em;
-  margin-bottom: 12px;
-}
+    @include tablet {
+      margin-left: 25px;
+    }
+  }
 </style>
