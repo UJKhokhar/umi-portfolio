@@ -1,9 +1,8 @@
 # umi-portfolio-2021
 TODO:
-* Scroll to top when clicking hamburger
-* Close pop up nav when you click a link
-* Scroll to section when you click on link
+* hover cursor on clickables
 * Accordian Link size on desktop
+* Fix scroll to section
 * clean up scss
 * clean up components
 * delete unnecessary components

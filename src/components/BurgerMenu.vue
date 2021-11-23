@@ -39,6 +39,26 @@
         />
       </svg>
     </div>
+    <div
+      class="abso"
+      :class="{active : isNavOpen}"
+    >
+      <nav>
+        <ul>
+          <a
+            href="#live"
+            @click="go('work')"
+          ><li>Live Projects</li></a>
+          <a
+            href="#companies"
+            @click="go('companies')"
+          ><li>Other Work</li></a>
+          <a
+            href="#contact"
+          ><li>Contact</li></a>
+        </ul>
+      </nav>
+    </div>
   </div>
 </template>
 
@@ -55,9 +75,15 @@ export default {
     };
   },
   methods: {
-    navStuff() {
-      this.$emit('toggleNav');
+    go(where) {
       this.animateNav();
+      this.isNavOpen = !this.isNavOpen;
+      document.body.classList.toggle('no-scroll');
+      document.getElementById(where).scrollIntoView({behavior: 'smooth'})
+    },
+    navStuff() {
+      this.animateNav();
+      window.scrollTo(0,0);
       this.isNavOpen = !this.isNavOpen;
       document.body.classList.toggle('no-scroll');
     },
@@ -184,5 +210,47 @@ export default {
   height: 50px;
   z-index: 2;
   position: relative;
+  cursor: pointer;
+}
+
+$border_size: 10px;
+
+.abso {
+  width: calc(100vw - #{$border_size * 2});
+  height: calc(100vh - #{$border_size * 2});
+  background-color: $white;
+  z-index: 1;
+  position: absolute;
+  top: -2000px;
+  left: 0;
+  transition: ease-in top .25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: $border_size solid $purple;
+  border-radius: 20px;
+
+  &.active {
+    top: 0;
+  }
+
+  ul {
+    text-align: center;
+    list-style-type: none;
+
+    li {
+      padding: 20px 0;
+    }
+
+    a {
+      color: $purple;
+      text-decoration: none;
+      font-size: 1.5em;
+
+      @include tablet {
+        font-size: 2.5em;
+      }
+    }
+  }
 }
 </style>

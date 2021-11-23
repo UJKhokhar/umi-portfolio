@@ -64,4 +64,8 @@ export default {
       margin-left: 25px;
     }
   }
+
+  h4 {
+    cursor: pointer;
+  }
 </style>

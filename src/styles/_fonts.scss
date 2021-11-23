@@ -61,9 +61,15 @@ a {
   color: $yellow;
   margin-bottom: 12px;
   font-size: 0.8em;
+  cursor: pointer;
 
   @include tablet {
     font-size: 0.9em;
+    margin-bottom: 24px;
+  }
+
+  @include desktop {
+    font-size: 1em;
     margin-bottom: 24px;
   }
 }

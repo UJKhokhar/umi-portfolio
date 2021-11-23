@@ -1,6 +1,9 @@
 <template>
-  <div class="work h-padding-top">
-    <h3 href="#live">
+  <div
+    id="work"
+    class="work h-padding-top"
+  >
+    <h3>
       Live Projects
     </h3>
     <Accordian

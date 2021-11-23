@@ -1,5 +1,8 @@
 <template>
-  <div class="h-padding-top">
+  <div
+    id="companies"
+    class="h-padding-top"
+  >
     <h3>Some companies I've worked with</h3>
     <div class="gridc">
       <SVGImage svg-file="Citi" />
