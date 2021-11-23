@@ -1,6 +1,8 @@
 <template>
   <div class="work h-padding-top">
-    <h3>Live Projects</h3>
+    <h3 href="#live">
+      Live Projects
+    </h3>
     <Accordian
       v-for="(workplace, index) in workList"
       :key="index"

@@ -21,6 +21,7 @@ h1 {
 h2 {
   font-size: 1.3em;
   color: $white;
+  line-height: 1.2;
 
   @include tablet {
     font-size: 2em;
@@ -38,6 +39,10 @@ h3 {
   @include tablet {
     font-size: 1.6em;
     margin-bottom: 96px;
+  }
+
+  @include desktop {
+    font-size: 1.8em;
   }
 }
 
@@ -66,6 +71,7 @@ a {
 li {
   font-size: 0.7em;
   margin-bottom: 12px;
+  line-height: 1.2;
 
   @include tablet {
     font-size: 1em;

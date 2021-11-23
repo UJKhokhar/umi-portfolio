@@ -5,6 +5,7 @@
       href="mailto:ujkhokhar@gmail.com?subject=I saw your site Umi and it's awesome!"
     >
       <SVGWrapper
+        class="h-margin-right"
         width="30"
         height="22"
         icon-color="#ffffff"
@@ -32,7 +33,6 @@ a {
   text-decoration: none;
   color: $yellow;
   justify-content: space-evenly;
-  width: 50%;
 }
 
 h3 {

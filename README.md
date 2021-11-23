@@ -1,4 +1,12 @@
 # umi-portfolio-2021
+TODO:
+* Scroll to top when clicking hamburger
+* Close pop up nav when you click a link
+* Scroll to section when you click on link
+* Accordian Link size on desktop
+* clean up scss
+* clean up components
+* delete unnecessary components
 
 ## Project setup
 ```

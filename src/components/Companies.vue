@@ -33,8 +33,11 @@ export default {
 
   @include tablet {
     grid-template-columns: .4fr .4fr;
-    grid-column-gap: 96px;
-    grid-row-gap: 48px;
+    justify-content: space-evenly;
+  }
+
+  @include desktop {
+    grid-template-columns: .2fr .2fr .2fr;
   }
 }
 </style>

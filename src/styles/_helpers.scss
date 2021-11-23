@@ -8,6 +8,10 @@ body.no-scroll {
   @include tablet {
     padding-top: 100px;
   }
+
+  @include desktop {
+    padding-top: 120px;
+  }
 }
 
 .h-border-bottom-purple {
@@ -21,6 +25,10 @@ body.no-scroll {
 
 .h-margin-right {
   margin-right: 6px;
+
+  @include tablet {
+    margin-right: 12px;
+  }
 }
 
 .h-justify-content-right {
