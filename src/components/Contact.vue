@@ -17,7 +17,7 @@
 
 <script>
 import SVGWrapper from '@/components/SVGWrapper';
-import Mail from '@/assets/logos/Mail';
+import Mail from '@/assets/svgComponents/Mail';
 
 export default {
   name: 'Contact',

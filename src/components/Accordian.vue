@@ -29,7 +29,7 @@
 
 <script>
 import SVGWrapper from '@/components/SVGWrapper';
-import Arrow from '@/assets/logos/Arrow';
+import Arrow from '@/assets/svgComponents/Arrow';
 
 export default {
   name: 'Accordian',
