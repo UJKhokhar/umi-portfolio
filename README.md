@@ -1,11 +1,12 @@
 # umi-portfolio-2021
 TODO:
-* hover cursor on clickables
 * Accordian Link size on desktop
 * Fix scroll to section
 * clean up scss
 * clean up components
 * delete unnecessary components
+* cloudfront
+* fix mobile iphone viewport height
 
 ## Project setup
 ```

@@ -2,8 +2,8 @@
   <div>
     <img
       class="responsive-img"
-      alt="JS logo"
       :src="path"
+      alt="altText"
     >
   </div>
 </template>
@@ -13,6 +13,10 @@ export default {
   name: 'SVGImage',
   props: {
     svgFile: {
+      type: String,
+      required: true,
+    },
+    altText: {
       type: String,
       required: true
     }
@@ -29,6 +33,5 @@ export default {
 .responsive-img {
   max-width: 100%;
   width: 100%;
-  height: auto;
 }
 </style>

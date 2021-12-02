@@ -74,30 +74,41 @@ export default {
       isNavOpen: false,
     };
   },
+  mounted() {
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    window.addEventListener('resize', () => {
+      // We execute the same script as before
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+  },
   methods: {
     go(where) {
       this.animateNav();
       this.isNavOpen = !this.isNavOpen;
-      document.body.classList.toggle('no-scroll');
+      document.body.classList.toggle('h-no-scroll');
       document.getElementById(where).scrollIntoView({behavior: 'smooth'})
     },
     navStuff() {
       this.animateNav();
       window.scrollTo(0,0);
       this.isNavOpen = !this.isNavOpen;
-      document.body.classList.toggle('no-scroll');
+      document.body.classList.toggle('h-no-scroll');
     },
     animateNav() {
       // // this.isNavOpen = !this.isNavOpen;
       // console.log("WTF");
-      const t1 = anime.timeline({
+      const menuToX = anime.timeline({
         easing: 'easeOutExpo',
         duration: 200,
         autoplay: false,
-        // loop: true
       });
 
-      t1.add({ // lines to circles
+      menuToX.add({ // lines to circles
           targets: '#line1',
           x1: 30,
           x2: 30,
@@ -150,13 +161,13 @@ export default {
         );
 
 
-      const t2 = anime.timeline({
+      const xToMenu = anime.timeline({
         easing: 'easeOutExpo',
         duration: 200,
         autoplay: false,
       });
 
-      t2.add({
+      xToMenu.add({
         targets: '#line1',
         x1: 30,
         y1: 30,
@@ -195,9 +206,9 @@ export default {
       played = !played;
 
       if (!played) {
-        t2.play();
+        menuToX.play();
       } else {
-        t1.play();
+        xToMenu.play();
       }
     },
   },
@@ -218,6 +229,7 @@ $border_size: 10px;
 .abso {
   width: calc(100vw - #{$border_size * 2});
   height: calc(100vh - #{$border_size * 2});
+  height: calc(var(--vh, 1vh) * 100 - #{$border_size * 2});
   background-color: $white;
   z-index: 1;
   position: absolute;

@@ -5,12 +5,30 @@
   >
     <h3>Some companies I've worked with</h3>
     <div class="gridc">
-      <SVGImage svg-file="Citi" />
-      <SVGImage svg-file="Ebay" />
-      <SVGImage svg-file="Hawaii" />
-      <SVGImage svg-file="NOAA" />
-      <SVGImage svg-file="Promundo" />
-      <SVGImage svg-file="Tresemme" />
+      <SVGImage
+        alt-text="Citi logo"
+        svg-file="Citi"
+      />
+      <SVGImage
+        alt-text="Ebay logo"
+        svg-file="Ebay"
+      />
+      <SVGImage
+        alt-text="Hawaii logo"
+        svg-file="Hawaii"
+      />
+      <SVGImage
+        alt-text="NOAA logo"
+        svg-file="NOAA"
+      />
+      <SVGImage
+        alt-text="Promundo logo"
+        svg-file="Promundo"
+      />
+      <SVGImage
+        alt-text="Tresemme logo"
+        svg-file="Tresemme"
+      />
     </div>
   </div>
 </template>
@@ -35,7 +53,7 @@ export default {
   align-items: center;
 
   @include tablet {
-    grid-template-columns: .4fr .4fr;
+    grid-template-columns: .3fr .3fr;
     justify-content: space-evenly;
   }
 
