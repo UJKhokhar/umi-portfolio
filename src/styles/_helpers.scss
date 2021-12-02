@@ -14,22 +14,6 @@
   }
 }
 
-.h-border-bottom-purple {
-  border-bottom: 1px solid $purple;
-  // border-image-source: linear-gradient(to top, red, yellow);
-  //   background: /* gradient can be an image */
-  //   linear-gradient(
-  //     to right,
-  //     $purple, 
-  //     $yellow,
-  //     $purple
-  //   )
-  //   left
-  //   bottom
-  //   no-repeat;
-  // background-size:100% 1px ;/* if linear-gradient, we need to resize it */
-}
-
 .h-align-items-center {
   display: flex;
   align-items: center;

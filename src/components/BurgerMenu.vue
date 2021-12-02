@@ -100,8 +100,6 @@ export default {
       document.body.classList.toggle('h-no-scroll');
     },
     animateNav() {
-      // // this.isNavOpen = !this.isNavOpen;
-      // console.log("WTF");
       const menuToX = anime.timeline({
         easing: 'easeOutExpo',
         duration: 200,
@@ -160,7 +158,6 @@ export default {
           '-=200'
         );
 
-
       const xToMenu = anime.timeline({
         easing: 'easeOutExpo',
         duration: 200,
@@ -206,9 +203,9 @@ export default {
       played = !played;
 
       if (!played) {
-        menuToX.play();
-      } else {
         xToMenu.play();
+      } else {
+        menuToX.play();
       }
     },
   },

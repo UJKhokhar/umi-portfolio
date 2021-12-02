@@ -1,8 +1,11 @@
 <template>
-  <div class="h-border-bottom-purple">
-    <div @click="$emit('fuck', index)">
-      <h4>{{ workplace.workplace }}</h4>
-    </div>
+  <div class="accordian">
+    <button
+      class="accordian__button"
+      @click="$emit('fuck', index)"
+    >
+      {{ workplace.workplace }}
+    </button>
     <div class="content">
       <ul>
         <li
@@ -14,7 +17,7 @@
       </ul>
       <a
         :href="workplace.link"
-        class="h-align-items-center h-justify-content-right"
+        class="h-align-items-center accordian__link"
       ><SVGWrapper
         class="h-margin-right"
         width="15"
@@ -37,12 +40,48 @@ export default {
     SVGWrapper,
     Arrow,
   },
-  props: ['workplace'],
+  props: {
+    workplace: {
+      type: Object,
+      required: true,
+    }
+  },
   emits: ['fuck'],
 };
 </script>
 
 <style lang="scss" scoped>
+.accordian {
+  border-bottom: 1px solid $purple;
+
+  .accordian__button {
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 48px;
+    background-color: transparent;
+    color: $purple;
+    font-size: .9em;
+
+    @include tablet {
+      height: 96px;
+      font-size: 1.2em;
+    }
+
+    @include desktop {
+      height: 96px;
+      font-size: 1.2em;
+    }
+  }
+
+  .accordian__link {
+    justify-content: flex-end;
+  }
+}
+
   .content {
     max-height: 0;
     transition: max-height 0.15s ease-out;

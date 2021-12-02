@@ -47,7 +47,7 @@ export default {
 <style lang="scss" scoped>
 .gridc {
   display: grid;
-  grid-template-columns: 0.5fr;
+  grid-template-columns: 0.4fr;
   justify-content: center;
   grid-row-gap: 30px;
   align-items: center;

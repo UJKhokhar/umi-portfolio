@@ -19,9 +19,9 @@ h1 {
 }
 
 h2 {
-  font-size: 1.3em;
+  font-size: 1em;
   color: $white;
-  line-height: 1.2;
+  line-height: 1.4;
 
   @include tablet {
     font-size: 1.7em;
@@ -50,15 +50,17 @@ h3 {
   }
 }
 
-h4 {
-  font-size: 0.9em;
-  margin: 12px 0;
+// TODO: DELETE THIS
+// h4 {
+//   font-weight: 200;
+//   font-size: 0.9em;
+//   margin: 12px 0;
 
-  @include tablet {
-    font-size: 1.2em;
-    margin: 24px 0;
-  }
-}
+//   @include tablet {
+//     font-size: 1.2em;
+//     margin: 24px 0;
+//   }
+// }
 
 a {
   text-decoration: none;
@@ -74,7 +76,7 @@ a {
 
   @include desktop {
     font-size: 1em;
-    margin-bottom: 24px;
+    margin-bottom: 48px;
   }
 }
 

@@ -2,7 +2,7 @@
   <div class="umi-header">
     <nav class="main-nav">
       <h1>Umi</h1>
-      <BurgerMenu @toggleNav="foo" />
+      <BurgerMenu />
     </nav>
   </div>
 </template>

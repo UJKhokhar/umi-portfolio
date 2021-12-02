@@ -1,12 +1,12 @@
 # umi-portfolio-2021
 TODO:
-* Accordian Link size on desktop
-* Fix scroll to section
+* ACCESSIBILITY RESEARCH
+* Accordian Header to Buttons
 * clean up scss
 * clean up components
 * delete unnecessary components
+* Fix scroll to section
 * cloudfront
-* fix mobile iphone viewport height
 
 ## Project setup
 ```
