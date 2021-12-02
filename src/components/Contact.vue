@@ -5,6 +5,7 @@
       href="mailto:ujkhokhar@gmail.com?subject=I saw your site Umi and it's awesome!"
     >
       <SVGWrapper
+        svg-title="Mail icon used to indicate a link that opens a mail form"
         class="h-margin-right"
         width="30"
         height="22"

@@ -33,14 +33,10 @@ body {
   background-color: $black;
   color: $purple;
   margin: 0;
-  padding: 40px;
-
-  @include tablet {
-    padding: 60px;
-  }
+  padding: $spacing-lg;
 
   @include desktop {
-    padding: 80px;
+    padding: $spacing-xl;
   }
 }
 </style>

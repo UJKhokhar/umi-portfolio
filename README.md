@@ -1,12 +1,23 @@
 # umi-portfolio-2021
-TODO:
+BIG TODO:
 * ACCESSIBILITY RESEARCH
-* Accordian Header to Buttons
-* clean up scss
-* clean up components
-* delete unnecessary components
-* Fix scroll to section
-* cloudfront
+* Apply BEM to CSS
+* Delete extra scss
+* Clean up components
+* Cloudfront
+* Make resume
+
+TASKS TODO:
+* Replace contact with mail icon
+* Add linkedin icon
+* Replace all spacing css with variables
+* Check all helpers and evaluate neccessity
+
+ENHANCEMENTS TODO:
+* SVG Wave Background
+* Accordian arrow + animation
+* Accordian bottom border gradient animation
+* Light mode design + light mode switch
 
 ## Project setup
 ```

@@ -2,16 +2,30 @@
   overflow: hidden;
 }
 
+
+// Spacing Helpers
 .h-padding-top {
-  padding-top: 60px;
+  padding-top: $spacing-lg;
 
   @include tablet {
-    padding-top: 100px;
+    padding-top: $spacing-xl;
   }
 
-  @include desktop {
-    padding-top: 120px;
+  // @include desktop {
+  //   padding-top: $spacing-xl;
+  // }
+}
+
+.h-padding-top-bot {
+  padding: $spacing-lg 0;
+
+  @include tablet {
+    padding: $spacing-xl 0;
   }
+
+  // @include desktop {
+  //   padding: $spacing-xl 0;
+  // }
 }
 
 .h-align-items-center {
@@ -20,15 +34,12 @@
 }
 
 .h-margin-right {
-  margin-right: 6px;
-
-  @include tablet {
-    margin-right: 12px;
-  }
+  margin-right: $spacing-sm;
 }
 
-.h-justify-content-right {
-  justify-content: right;
+.h-justify-content-flex-end {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .h-justify-content-center {

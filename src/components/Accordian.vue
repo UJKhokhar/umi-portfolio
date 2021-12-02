@@ -15,17 +15,20 @@
           {{ item }}
         </li>
       </ul>
-      <a
-        :href="workplace.link"
-        class="h-align-items-center accordian__link"
-      ><SVGWrapper
-        class="h-margin-right"
-        width="15"
-        height="12"
-        icon-color="#fff433"
-      ><Arrow />
-      </SVGWrapper>
-        Visit the Site</a>
+      <div class="h-justify-content-flex-end">
+        <a
+          :href="workplace.link"
+          class="h-align-items-center accordian__link"
+        ><SVGWrapper
+          svg-title="Arrow used to indicate a link"
+          class="h-margin-right"
+          width="15"
+          height="12"
+          icon-color="#fff433"
+        ><Arrow />
+        </SVGWrapper>
+          Visit the Site</a>
+      </div>
     </div>
   </div>
 </template>
@@ -61,24 +64,32 @@ export default {
     margin: 0;
     padding: 0;
     border: none;
-    height: 48px;
+    padding: $spacing-sm 0;
     background-color: transparent;
     color: $purple;
     font-size: .9em;
+    font-family: "Nunito", Helvetica, sans-serif;
 
     @include tablet {
-      height: 96px;
-      font-size: 1.2em;
-    }
-
-    @include desktop {
-      height: 96px;
+      padding: $spacing-md 0;
       font-size: 1.2em;
     }
   }
 
   .accordian__link {
-    justify-content: flex-end;
+    color: $yellow;
+    margin-bottom: $spacing-sm;
+    font-size: 0.7em;
+    cursor: pointer;
+
+    @include tablet {
+      font-size: 0.9em;
+      margin-bottom: $spacing-lg;
+    }
+
+    @include desktop {
+      font-size: 1em;
+    }
   }
 }
 
@@ -97,11 +108,13 @@ export default {
 
   ul {
     list-style: circle;
-    margin-left: 20px;
+    margin-left: $spacing-md;
+    margin-bottom: $spacing-sm;
 
-    @include tablet {
-      margin-left: 25px;
-    }
+    // TODO: DELETE
+    // @include tablet {
+    //   margin-left: 25px;
+    // }
   }
 
   h4 {

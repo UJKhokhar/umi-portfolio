@@ -5,7 +5,7 @@
     :height="height"
     role="presentation"
   >
-    <!-- <title :id="iconName" lang="en">{{ iconName }} icon</title> -->
+    <title>{{ svgTitle }}</title>
     <g :fill="iconColor">
       <slot />
     </g>
@@ -15,9 +15,9 @@
 <script>
 export default {
   props: {
-    iconName: {
+    svgTitle: {
       type: String,
-      default: 'box',
+      required: true
     },
     width: {
       type: [Number, String],
@@ -34,11 +34,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-svg {
-  /* display: inline-block;
-  vertical-align: baseline;
-  margin-bottom: -2px; yes, I'm that particular about formatting */
-}
-</style>

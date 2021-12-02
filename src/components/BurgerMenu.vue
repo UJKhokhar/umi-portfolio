@@ -2,7 +2,6 @@
   <div>
     <div class="svg-wrapper">
       <svg
-        id="poop"
         viewBox="0 0 100 100"
         xmlns="http://www.w3.org/2000/svg"
         @click="navStuff"
@@ -68,7 +67,6 @@ let played = false;
 
 export default {
   name: 'BurgerMenu',
-  emits: ['toggleNav'],
   data() {
     return {
       isNavOpen: false,
