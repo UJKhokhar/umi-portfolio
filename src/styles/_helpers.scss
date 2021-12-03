@@ -2,26 +2,16 @@
   overflow: hidden;
 }
 
-// Umi Header
-// mobile -- margin bottom lg
-// tablet -- margin- bottom xl
-// desktop??
-
-// Spacing Helpers
-.h-padding-top {
-  padding-top: $spacing-lg;
-
-  @include tablet {
-    padding-top: $spacing-xl;
-  }
-
-  // @include desktop {
-  //   padding-top: $spacing-xl;
-  // }
+.h-no-margin-none {
+  margin: 0;
 }
 
-.h-margin-bottom-sm {
+.h-margin-bottom-sm-to-md {
   margin-bottom: $spacing-sm;
+
+  @include tablet {
+    margin-bottom: $spacing-md;
+  }
 }
 
 .h-margin-bottom-md-to-lg {
@@ -40,20 +30,8 @@
   }
 }
 
-.h-margin-bottom-xl {
-  margin-bottom: $spacing-xl;
-}
-
-.h-padding-top-bot {
-  padding: $spacing-lg 0;
-
-  @include tablet {
-    padding: $spacing-xl 0;
-  }
-
-  // @include desktop {
-  //   padding: $spacing-xl 0;
-  // }
+.h-margin-right-sm {
+  margin-right: $spacing-sm;
 }
 
 .h-align-items-center {
@@ -61,14 +39,6 @@
   align-items: center;
 }
 
-.h-margin-right {
-  margin-right: $spacing-sm;
-}
-
-.h-justify-content-flex-end {
-  display: flex;
-  justify-content: flex-end;
-}
 
 .h-justify-content-center {
   justify-content: center;

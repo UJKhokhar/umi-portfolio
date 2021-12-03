@@ -35,16 +35,14 @@ h2 {
 
 h3 {
   font-size: 1.1em;
-  // TODO: DELETE
-  // margin-bottom: $spacing-lg;
   text-align: center;
   color: $yellow;
   font-weight: 100;
 
+  @extend .h-margin-bottom-md-to-lg;
+
   @include tablet {
     font-size: 1.6em;
-    // TODO: DELETE
-    // margin-bottom: 96px;
   }
 
   @include desktop {

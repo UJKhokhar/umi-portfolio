@@ -3,9 +3,7 @@
     id="companies"
     class="h-margin-bottom-lg-to-xl"
   >
-    <h3 class="h-margin-bottom-md-to-lg">
-      Some companies I've worked with
-    </h3>
+    <h3>Some companies I've worked with</h3>
     <div class="gridc">
       <SVGImage
         alt-text="Citi logo"

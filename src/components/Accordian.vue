@@ -6,8 +6,8 @@
     >
       {{ workplace.workplace }}
     </button>
-    <div class="content">
-      <ul>
+    <div class="project">
+      <ul class="project__details h-margin-bottom-sm-to-md">
         <li
           v-for="(item, index) in workplace.description"
           :key="index"
@@ -15,13 +15,13 @@
           {{ item }}
         </li>
       </ul>
-      <div class="h-justify-content-flex-end">
+      <div class="project__footer">
         <a
           :href="workplace.link"
-          class="h-align-items-center accordian__link"
+          class="project__link [ h-align-items-center  h-margin-bottom-sm-to-md ]"
         ><SVGWrapper
           svg-title="Arrow used to indicate a link"
-          class="h-margin-right"
+          class="h-margin-right-sm"
           width="15"
           height="12"
           icon-color="#fff433"
@@ -58,12 +58,6 @@ export default {
   border-bottom: 1px solid $purple;
 
   .accordian__button {
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    border: none;
     padding: $spacing-sm 0;
     background-color: transparent;
     color: $purple;
@@ -75,49 +69,56 @@ export default {
       font-size: 1.2em;
     }
   }
+}
 
-  .accordian__link {
+.project {
+  max-height: 0;
+  transition: max-height 0.15s ease-out;
+  overflow: hidden;
+
+  .project__footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .project__link {
     color: $yellow;
-    margin-bottom: $spacing-sm;
     font-size: 0.7em;
     cursor: pointer;
 
     @include tablet {
       font-size: 0.9em;
-      margin-bottom: $spacing-lg;
     }
 
     @include desktop {
       font-size: 1em;
     }
+
+    svg {
+      transition: translateX 1s ease-in-out;
+    }
+
+    &:hover {
+      svg {
+        transform: translateX(6px);
+      }
+    }
   }
 }
 
-  .content {
-    max-height: 0;
-    transition: max-height 0.15s ease-out;
-    overflow: hidden;
+.accordian--active {
+  .project {
+    max-height: 500px;
+    transition: max-height 0.25s ease-in;
   }
+}
 
-  .active {
-    .content {
-      max-height: 500px;
-      transition: max-height 0.25s ease-in;
-    }
-  }
+.project__details {
+  list-style: circle;
+  margin-left: $spacing-md;
+}
 
-  ul {
-    list-style: circle;
-    margin-left: $spacing-md;
-    margin-bottom: $spacing-sm;
-
-    // TODO: DELETE
-    // @include tablet {
-    //   margin-left: 25px;
-    // }
-  }
-
-  h4 {
-    cursor: pointer;
-  }
+h4 {
+  cursor: pointer;
+}
 </style>

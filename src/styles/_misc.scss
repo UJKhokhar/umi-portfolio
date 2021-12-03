@@ -1,0 +1,20 @@
+body {
+  background-color: $black;
+  color: $purple;
+  margin: 0;
+  padding: $spacing-lg;
+
+  @include tablet {
+    padding: $spacing-xl;
+  }
+}
+
+// Button reset
+button {
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  border: none;
+}

@@ -3,13 +3,13 @@
     id="work"
     class="h-margin-bottom-lg-to-xl"
   >
-    <h3 class="h-margin-bottom-md-to-lg">
+    <h3>
       Live Projects
     </h3>
     <Accordian
       v-for="(workplace, index) in workList"
       :key="index"
-      :class="{ active: activeItemIndex === index }"
+      :class="{ 'accordian--active': activeItemIndex === index }"
       :workplace="workplace"
       @fuck="shit(index)"
     />

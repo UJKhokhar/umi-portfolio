@@ -66,7 +66,7 @@ import anime from 'animejs/lib/anime.es.js';
 let played = false;
 
 export default {
-  name: 'BurgerMenu',
+  name: 'Menu',
   data() {
     return {
       isNavOpen: false,

@@ -28,15 +28,4 @@ export default {
 <style lang="scss">
 @import './styles/reset.scss';
 @import './styles/main.scss';
-
-body {
-  background-color: $black;
-  color: $purple;
-  margin: 0;
-  padding: $spacing-lg;
-
-  @include tablet {
-    padding: $spacing-xl;
-  }
-}
 </style>
