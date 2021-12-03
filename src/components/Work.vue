@@ -1,9 +1,9 @@
 <template>
   <div
     id="work"
-    class="work h-padding-top"
+    class="h-margin-bottom-lg-to-xl"
   >
-    <h3>
+    <h3 class="h-margin-bottom-md-to-lg">
       Live Projects
     </h3>
     <Accordian

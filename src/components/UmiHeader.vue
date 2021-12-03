@@ -1,5 +1,5 @@
 <template>
-  <div class="umi-header">
+  <div class="h-margin-bottom-lg-to-xl">
     <nav class="main-nav">
       <h1>Umi</h1>
       <BurgerMenu />

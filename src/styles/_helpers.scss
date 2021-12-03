@@ -2,6 +2,10 @@
   overflow: hidden;
 }
 
+// Umi Header
+// mobile -- margin bottom lg
+// tablet -- margin- bottom xl
+// desktop??
 
 // Spacing Helpers
 .h-padding-top {
@@ -14,6 +18,30 @@
   // @include desktop {
   //   padding-top: $spacing-xl;
   // }
+}
+
+.h-margin-bottom-sm {
+  margin-bottom: $spacing-sm;
+}
+
+.h-margin-bottom-md-to-lg {
+  margin-bottom: $spacing-md;
+
+  @include tablet {
+    margin-bottom: $spacing-lg;
+  }
+}
+
+.h-margin-bottom-lg-to-xl {
+  margin-bottom: $spacing-lg;
+
+  @include tablet {
+    margin-bottom: $spacing-xl;
+  }
+}
+
+.h-margin-bottom-xl {
+  margin-bottom: $spacing-xl;
 }
 
 .h-padding-top-bot {

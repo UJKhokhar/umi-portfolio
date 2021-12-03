@@ -35,7 +35,7 @@ body {
   margin: 0;
   padding: $spacing-lg;
 
-  @include desktop {
+  @include tablet {
     padding: $spacing-xl;
   }
 }
