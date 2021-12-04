@@ -1,7 +1,6 @@
 <template>
   <div>
     <img
-      class="responsive-img"
       :src="path"
       alt="altText"
     >
@@ -30,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.responsive-img {
+img {
   max-width: 100%;
   width: 100%;
 }
