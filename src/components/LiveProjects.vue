@@ -1,17 +1,16 @@
 <template>
   <div
-    id="work"
+    id="live_projects"
     class="h-margin-bottom-lg-to-xl"
   >
-    <h3>
-      Live Projects
-    </h3>
+    <h3>Live Projects</h3>
     <Accordian
-      v-for="(workplace, index) in workList"
+      v-for="(project, index) in projectList"
       :key="index"
-      :class="{ 'accordian--active': activeItemIndex === index }"
-      :workplace="workplace"
-      @fuck="shit(index)"
+      :class="{ 'accordian--active': activeProjectIndex === index }"
+      :project="project"
+      :tab-index-value="activeProjectIndex === index ? null : '-1'"
+      @expandProject="expandProject(index)"
     />
   </div>
 </template>
@@ -20,14 +19,14 @@
 import Accordian from './Accordian.vue';
 
 export default {
-  name: 'Work',
+  name: 'LiveProjects',
   components: {
     Accordian,
   },
   data() {
     return {
-      activeItemIndex: null,
-      workList: [
+      activeProjectIndex: null,
+      projectList: [
         {
           workplace: 'ASCAP',
           description: [
@@ -62,11 +61,11 @@ export default {
     };
   },
   methods: {
-    shit(index) {
-      if (index === this.activeItemIndex) {
-        this.activeItemIndex = null;
+    expandProject(projectIndex) {
+      if (projectIndex === this.activeProjectIndex) {
+        this.activeProjectIndex = null;
       } else {
-        this.activeItemIndex = index;
+        this.activeProjectIndex = projectIndex;
       }
     },
   },

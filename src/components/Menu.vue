@@ -4,8 +4,9 @@
       <svg
         viewBox="0 0 100 100"
         xmlns="http://www.w3.org/2000/svg"
-        @click="navStuff"
+        @click="toggleNav"
       >
+        <title>Menu icon</title>
         <line
           id="line1"
           stroke-linecap="round"
@@ -39,22 +40,59 @@
       </svg>
     </div>
     <div
-      class="abso"
+      class="navigation [ h-align-items-center h-justify-content-center ]"
       :class="{active : isNavOpen}"
     >
       <nav>
-        <ul>
-          <a
-            href="#live"
-            @click="go('work')"
-          ><li>Live Projects</li></a>
-          <a
-            href="#companies"
-            @click="go('companies')"
-          ><li>Other Work</li></a>
-          <a
-            href="#contact"
-          ><li>Contact</li></a>
+        <ul class="navigation__links [ h-align-items-center ]">
+          <li>
+            <a
+              href="#live"
+              @click="scrollTo('live_projects')"
+            >Live Projects</a>
+          </li>
+          <li>
+            <a
+              href="#companies"
+              @click="scrollTo('companies')"
+            >Other Work</a>
+          </li>
+          <li>
+            <a
+              href="./umi_resume.pdf"
+              download
+            >Resume</a>
+          </li>
+          <li class="mail">
+            <a href="#contact">
+
+              <SVGWrapper
+                desc="Opens email form to send to Umi"
+                svg-title="Mail"
+                role="link"
+                width="100%"
+                height="100%"
+                viewBox="0 0 30 20"
+                icon-color="#9b59d0"
+              ><Mail /></SVGWrapper>
+            </a>
+          </li>
+          <li class="linkedin">
+            <a
+              href="https://www.linkedin.com/in/ujkhokhar/"
+              target="_blank"
+            >
+              <SVGWrapper
+                desc="Go to Umi's Linkedin"
+                svg-title="Linkedin"
+                role="link"
+                width="100%"
+                height="100%"
+                viewBox="0 0 21 21"
+                icon-color="#9b59d0"
+              ><Linkedin /></SVGWrapper>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -62,42 +100,59 @@
 </template>
 
 <script>
+import SVGWrapper from '@/components/SVGWrapper';
+import Mail from '@/assets/svgComponents/Mail';
+import Linkedin from '@/assets/svgComponents/Linkedin';
 import anime from 'animejs/lib/anime.es.js';
 let played = false;
 
 export default {
   name: 'Menu',
+  components: {
+    SVGWrapper,
+    Mail,
+    Linkedin,
+  },
   data() {
     return {
       isNavOpen: false,
     };
   },
   mounted() {
-    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    // Get the viewport height and we multiply it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
-    // Then we set the value in the --vh custom property to the root of the document
+    // Set the value in the --vh custom property to the root of the document
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+    // In case of portrait to landscape on mobile
     window.addEventListener('resize', () => {
-      // We execute the same script as before
       let vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
   },
   methods: {
-    go(where) {
-      this.animateNav();
-      this.isNavOpen = !this.isNavOpen;
-      document.body.classList.toggle('h-no-scroll');
-      document.getElementById(where).scrollIntoView({behavior: 'smooth'})
+    scrollTo(elementId) {
+      this.navEvents();
+      document.getElementById(elementId).scrollIntoView({behavior: 'smooth'})
     },
-    navStuff() {
-      this.animateNav();
+    toggleNav() {
+      this.navEvents();
       window.scrollTo(0,0);
+    },
+    navEvents() {
+      // Animate nav
+      // Toggle nav
+      // Toggle scroll lock
+      this.animateNav();
       this.isNavOpen = !this.isNavOpen;
       document.body.classList.toggle('h-no-scroll');
     },
     animateNav() {
+      // This is not the ideal way to do this but it was fun
+      // First animate menu to X
+      // If the menu has been animated to an x already
+      // animate back to menu
+
       const menuToX = anime.timeline({
         easing: 'easeOutExpo',
         duration: 200,
@@ -221,9 +276,10 @@ export default {
 
 $border_size: 10px;
 
-.abso {
+.navigation {
   width: calc(100vw - #{$border_size * 2});
   height: calc(100vh - #{$border_size * 2});
+  // Fix for 100vh issue in mobile browsers
   height: calc(var(--vh, 1vh) * 100 - #{$border_size * 2});
   background-color: $white;
   z-index: 1;
@@ -231,9 +287,6 @@ $border_size: 10px;
   top: -2000px;
   left: 0;
   transition: ease-in top .25s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: $border_size solid $purple;
   border-radius: 20px;
 
@@ -241,22 +294,40 @@ $border_size: 10px;
     top: 0;
   }
 
-  ul {
+  .navigation__links {
     text-align: center;
     list-style-type: none;
+    flex-direction: column;
+    font-size: 1em;
+
+    @include tablet {
+      font-size: 2em;
+    }
+
+    @include desktop {
+      font-size: 2.2em;
+    }
 
     li {
-      padding: 20px 0;
+      margin-bottom: $spacing-md;
+
+      &.mail,
+      &.linkedin {
+        width: 40px;
+      }
+
+      @include tablet {
+        margin-bottom: $spacing-lg;
+
+        &.mail,
+        &.linkedin {
+          width: 60px;
+        }
+      }
     }
 
     a {
       color: $purple;
-      text-decoration: none;
-      font-size: 1.5em;
-
-      @include tablet {
-        font-size: 2.5em;
-      }
     }
   }
 }

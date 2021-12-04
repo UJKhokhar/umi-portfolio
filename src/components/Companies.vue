@@ -4,7 +4,7 @@
     class="h-margin-bottom-lg-to-xl"
   >
     <h3>Some companies I've worked with</h3>
-    <div class="gridc">
+    <div class="companies__grid">
       <SVGImage
         alt-text="Citi logo"
         svg-file="Citi"
@@ -45,7 +45,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.gridc {
+.companies__grid {
   display: grid;
   grid-template-columns: 0.4fr;
   justify-content: center;

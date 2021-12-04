@@ -3,9 +3,13 @@
     xmlns="http://www.w3.org/2000/svg"
     :width="width"
     :height="height"
-    role="presentation"
+    :viewBox="viewBox"
+    aria-labelledbsy="title desc"
+    :role="role"
+    :color="svgColor"
   >
-    <title>{{ svgTitle }}</title>
+    <title id="title">{{ svgTitle }}</title>
+    <desc id="desc">{{ desc }}</desc>
     <g :fill="iconColor">
       <slot />
     </g>
@@ -14,18 +18,35 @@
 
 <script>
 export default {
+  name: 'SVGWrapper',
   props: {
     svgTitle: {
       type: String,
-      required: true
+      required: true,
+    },
+    desc: {
+      type: String,
+      required: true,
+    },
+    role: {
+      type: String,
+      required: true,
+    },
+    viewBox: {
+      type: String,
+      required: true,
+    },
+    svgColor: {
+      type: String,
+      default: 'currentColor',
     },
     width: {
       type: [Number, String],
-      default: 100,
+      default: 24,
     },
     height: {
       type: [Number, String],
-      default: 100,
+      default: 24,
     },
     iconColor: {
       type: String,

@@ -1,17 +1,14 @@
 # umi-portfolio-2021
 BIG TODO:
 * ACCESSIBILITY RESEARCH
-* Apply BEM to CSS
-* Delete extra scss
 * Clean up components
 * Cloudfront
-* Make resume
 
 TASKS TODO:
-* Replace contact with mail icon
-* Add linkedin icon
-* Replace all spacing css with variables
-* Check all helpers and evaluate neccessity
+* Don't tab into accordian unless its open
+* Accessibility test
+* Cloudfront
+
 
 ENHANCEMENTS TODO:
 * SVG Wave Background

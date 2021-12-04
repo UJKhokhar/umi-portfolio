@@ -1,7 +1,7 @@
 <template>
   <UmiHeader />
   <Intro />
-  <Work />
+  <LiveProjects />
   <Companies />
   <Contact />
 </template>
@@ -9,7 +9,7 @@
 <script>
 import UmiHeader from './components/UmiHeader.vue';
 import Intro from './components/Intro.vue';
-import Work from './components/Work.vue';
+import LiveProjects from './components/LiveProjects.vue';
 import Companies from './components/Companies.vue';
 import Contact from './components/Contact.vue';
 
@@ -18,7 +18,7 @@ export default {
   components: {
     UmiHeader,
     Intro,
-    Work,
+    LiveProjects,
     Companies,
     Contact,
   },

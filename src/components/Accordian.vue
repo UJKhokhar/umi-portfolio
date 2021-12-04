@@ -2,14 +2,14 @@
   <div class="accordian">
     <button
       class="accordian__button"
-      @click="$emit('fuck', index)"
+      @click="$emit('expandProject')"
     >
-      {{ workplace.workplace }}
+      {{ project.workplace }}
     </button>
     <div class="project">
       <ul class="project__details h-margin-bottom-sm-to-md">
         <li
-          v-for="(item, index) in workplace.description"
+          v-for="(item, index) in project.description"
           :key="index"
         >
           {{ item }}
@@ -17,13 +17,17 @@
       </ul>
       <div class="project__footer">
         <a
-          :href="workplace.link"
+          :href="project.link"
           class="project__link [ h-align-items-center  h-margin-bottom-sm-to-md ]"
+          :tabindex="tabIndexValue"
         ><SVGWrapper
-          svg-title="Arrow used to indicate a link"
+          desc="Arrow used to indicate a link"
+          svg-title="Arrow"
+          role="link"
           class="h-margin-right-sm"
           width="15"
           height="12"
+          viewBox="0 0 15 12"
           icon-color="#fff433"
         ><Arrow />
         </SVGWrapper>
@@ -44,12 +48,16 @@ export default {
     Arrow,
   },
   props: {
-    workplace: {
+    project: {
       type: Object,
       required: true,
+    },
+    tabIndexValue: {
+      required: true,
+      validator: (value) => (value == '-1') || (value == null)
     }
   },
-  emits: ['fuck'],
+  emits: ['expandProject'],
 };
 </script>
 
@@ -58,6 +66,7 @@ export default {
   border-bottom: 1px solid $purple;
 
   .accordian__button {
+    font-weight: 700;
     padding: $spacing-sm 0;
     background-color: transparent;
     color: $purple;
@@ -116,6 +125,22 @@ export default {
 .project__details {
   list-style: circle;
   margin-left: $spacing-md;
+
+  li {
+    font-size: 0.7em;
+    line-height: 1.3;
+    &:not(:last-of-type) {
+      margin-bottom: $spacing-sm;
+    }
+
+    @include tablet {
+      font-size: 1em;
+
+      &:not(:last-of-type) {
+        margin-bottom: $spacing-md
+      }
+    }
+  }
 }
 
 h4 {
