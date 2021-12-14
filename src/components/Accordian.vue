@@ -20,6 +20,7 @@
           :href="project.link"
           class="project__link [ h-align-items-center  h-margin-bottom-sm-to-md ]"
           :tabindex="tabIndexValue"
+          target="_blank"
         ><SVGWrapper
           desc="Arrow used to indicate a link"
           svg-title="Arrow"

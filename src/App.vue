@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import UmiHeader from './components/UmiHeader.vue';
-import Intro from './components/Intro.vue';
-import LiveProjects from './components/LiveProjects.vue';
-import Companies from './components/Companies.vue';
-import Contact from './components/Contact.vue';
+import UmiHeader from '@/components/UmiHeader.vue';
+import Intro from '@/components/Intro.vue';
+import LiveProjects from '@/components/LiveProjects.vue';
+import Companies from '@/components/Companies.vue';
+import Contact from '@/components/Contact.vue';
 
 export default {
   name: 'App',

@@ -104,6 +104,7 @@ import SVGWrapper from '@/components/SVGWrapper';
 import Mail from '@/assets/svgComponents/Mail';
 import Linkedin from '@/assets/svgComponents/Linkedin';
 import anime from 'animejs/lib/anime.es.js';
+
 let played = false;
 
 export default {
