@@ -64,8 +64,7 @@
             >Resume</a>
           </li>
           <li class="mail">
-            <a href="#contact">
-
+            <a href="mailto:ujkhokhar@gmail.com?subject=I saw your site Umi and it's awesome!">
               <SVGWrapper
                 desc="Opens email form to send to Umi"
                 svg-title="Mail"
