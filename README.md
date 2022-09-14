@@ -1,6 +1,8 @@
 # umi-portfolio
 Umi's portfolio built with Vue.js
 
+[See the live version](https://umi.wtf)
+
 
 ## Project setup
 ```
